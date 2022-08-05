@@ -1,0 +1,344 @@
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  color: #ffffff;
+  background-color: #222222;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+
+ul,
+li,
+a {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.mortgage {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+@media screen and (min-width: 1200px) {
+  .mortgage {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+.mortgage__container {
+  width: 1600px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media screen and (min-width: 1200px) {
+  .mortgage__container {
+    width: 1200px;
+  }
+}
+
+.mortgage__head {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 72px;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 1200px) {
+  .mortgage__head {
+    font-size: 45px;
+    line-height: 55px;
+  }
+}
+
+.mortgage__box {
+  margin-top: 132px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -70px;
+}
+
+.box__item {
+  margin-left: 70px;
+}
+
+.mortgage__banks-list {
+  margin-top: 32px;
+}
+
+.mortgage__banks-item {
+  position: relative;
+  width: 400px;
+  height: 24px;
+  padding: 20px 30px;
+  border: 1px solid #ffffff;
+  border-radius: 16px;
+  font-family: "Mark OT";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.mortgage__banks-item:not(:first-child) {
+  margin-top: 24px;
+}
+
+.current-bank-item {
+  background-color: #fff;
+  color: #222222;
+  cursor: pointer;
+}
+
+.mortgage__banks-item:hover {
+  background-color: #fff;
+  color: #222222;
+  cursor: pointer;
+}
+
+.mortgage__btn-new-bank {
+  margin-top: 64px;
+  padding: 20px 30px;
+  background-color: #2d9cdb;
+  font-family: "Mark OT";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 10px;
+  border-style: none;
+  cursor: pointer;
+}
+
+.mortgage__info-box {
+  width: 730px;
+  margin-top: 32px;
+  background-color: #2d2d2d;
+  border-radius: 16px;
+  padding: 32px;
+}
+
+@media screen and (min-width: 1200px) {
+  .mortgage__info-box {
+    width: 600px;
+  }
+}
+
+.mortgage__info-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.269);
+  padding-bottom: 20px;
+}
+
+.mortgage__info-item:not(:first-child) {
+  margin-top: 32px;
+}
+
+.info-text {
+  font-family: "Mark OT";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  color: #ffffff;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  -webkit-transition: opacity 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: scroll;
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+.modal {
+  padding: 48px 32px;
+  width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%) scale(1);
+
+  background-color: #2d2d2d;
+  border-radius: 16px;
+}
+
+/* @media screen and (min-width: 1200px) {
+  .modal {
+    -webkit-transform: translate(-50%, -25%);
+    transform: translate(-50%, -25%);
+  } */
+
+.modal .mortgage__title {
+  text-align: center;
+}
+
+.mortgage__form {
+  margin-top: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.mortgage__form-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-family: "Mark OT";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 23px;
+  color: #ffffff;
+}
+
+.mortgage__form-options:not(:first-child) {
+  margin-top: 20px;
+}
+
+.mortgage__form-input {
+  margin-top: 10px;
+  height: 24px;
+  border-radius: 8px;
+  border: 1px solid #fff;
+  background-color: #2d2d2d;
+  color: #fff;
+  padding: 10px 16px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  color: #ffffff;
+}
+
+.mortgage__form-submit {
+  display: block;
+  width: 250px;
+  padding: 20px 30px;
+  margin: 32px auto 0 auto;
+  background-color: #2d9cdb;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  border-style: none;
+  color: #ffffff;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.mortgage__banks-item--button {
+  display: flex;
+  justify-content: space-between;
+}
+.button--edit {
+  margin-top: 10px;
+  left: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height */
+
+  color: #ffffff;
+  border-style: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.button--delete {
+  left: auto;
+  right: 0;
+}
+
+.button--edit:hover {
+  color: #2d9cdb;
+}
+.close__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  width: 30px;
+  height: 30px;
+  border: none;
+
+  background-color: white;
+  border-radius: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: fill 350ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 350ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close__button:hover {
+  fill: #ffffff;
+  background-color: #2d9cdb;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+/*# sourceMappingURL=index.css.map */
